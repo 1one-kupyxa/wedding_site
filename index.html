@@ -41,55 +41,62 @@
     </style>
 </head>
 <body class="bg-[#F9F7F2] font-sans text-stone-800 antialiased">
-
-    <!-- Hero Section -->
-    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <!-- ================================================================= -->
+    <!-- ОБЛЕГЧЕННЫЙ ГЛАВНЫЙ БЛОК (HERO SECTION) С КНОПКОЙ RSVP -->
+    <!-- ================================================================= -->
+    <section class="relative min-h-screen flex items-center justify-center bg-[#F9F7F2] px-6 py-20 overflow-hidden">
         
-        <!-- Фоновый слой (Светлый пастельный градиент + текстура) -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-tr from-[#E3DCD2] via-[#F2EDE4] to-[#EAE3D9]">
-            <!-- Заглушка для фото: если захочешь фото на фон, просто раскомментируй <img> ниже -->
-            <!-- <img src="твое-фото.jpg" class="w-full h-full object-cover opacity-40 mix-blend-multiply"> -->
-            
-            <!-- Декоративный элемент (мягкое пятно света) -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-[120px] opacity-50"></div>
+        <!-- Декоративный воздушный фон -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-stone-200/50 filter blur-3xl"></div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-stone-200/50 filter blur-3xl"></div>
         </div>
 
-        <!-- Контент -->
-        <div class="relative z-10 text-center px-6 fade-in">
+        <div class="relative max-w-3xl mx-auto text-center space-y-10 z-10">
             
-            <!-- Верхняя подпись -->
-            <div class="mb-6">
-                <span class="uppercase tracking-[0.3em] text-[10px] md:text-xs text-stone-500 font-medium">
-                    Приглашаем вас разделить нашу радость
-                </span>
-            </div>
-
-            <!-- Имена (Playfair Display) -->
-            <h1 class="font-serif text-5xl md:text-8xl lg:text-9xl font-normal text-stone-800 leading-tight mb-8">
-                Кирилл <span class="italic text-stone-400 font-light">&</span> София
+            <!-- Верхняя маленькая плашка -->
+            <p class="text-[10px] uppercase tracking-[0.4em] text-stone-400 font-light">
+                Приглашение на свадьбу
+            </p>
+            
+            <!-- Главный изящный заголовок (Имена молодоженов) -->
+            <h1 class="font-serif text-5xl md:text-7xl font-extralight text-stone-800 tracking-wide leading-none">
+                Кирилл <span class="font-light italic text-stone-400">&</span> София
             </h1>
 
-            <!-- Дата -->
-            <div class="flex items-center justify-center space-x-4 mb-12">
-                <div class="h-[1px] w-8 md:w-12 bg-stone-300"></div>
-                <p class="font-serif italic text-lg md:text-2xl text-stone-600">
-                    11 июля 2026
+            <!-- Тонкая разделительная линия -->
+            <div class="h-[1px] w-12 bg-stone-300 mx-auto my-4"></div>
+
+            <!-- Блок персонального приветствия -->
+            <div class="space-y-4 max-w-xl mx-auto">
+                <!-- Сюда скрипт подставит имя из таблицы -->
+                <h2 id="welcome-text" class="font-serif text-xl md:text-2xl font-light italic text-stone-600 tracking-wider leading-relaxed">
+                    Дорогие друзья!
+                </h2>
+                
+                <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide max-w-sm mx-auto leading-relaxed pt-1">
+                    Мы рады пригласить вас разделить с нами особенный день начала нашей семейной истории.
                 </p>
-                <div class="h-[1px] w-8 md:w-12 bg-stone-300"></div>
             </div>
 
-            <!-- Кнопка RSVP -->
-            <div>
-                <a href="#rsvp" 
-                   class="inline-block px-10 py-4 border border-stone-800 text-stone-800 text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium 
-                          hover:bg-stone-800 hover:text-white transition-all duration-500 ease-in-out shadow-sm hover:shadow-lg">
-                    Подтвердить участие
+            <!-- ЭЛЕГАНТНАЯ КНОПКА RSVP -->
+            <div class="pt-2">
+                <a href="#rsvp" class="inline-block border border-stone-400 text-stone-800 font-light text-xs uppercase tracking-[0.2em] px-8 py-3.5 hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-all duration-300 shadow-sm">
+                    Подтвердить присутствие
                 </a>
             </div>
 
+            <!-- Минималистичная стрелка вниз -->
+            <div class="pt-6 animate-pulse">
+                <a href="#program" class="text-stone-300 hover:text-stone-600 transition-colors inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-5 h-5 mx-auto">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                    </svg>
+                </a>
+            </div>
+            
         </div>
     </section>
-
     <!-- Our Story Section -->
     <section id="our-story" class="py-20 md:py-32 bg-white px-6 overflow-hidden">
         <div class="max-w-4xl mx-auto">
@@ -117,15 +124,15 @@
                         <div class="w-full flex-shrink-0 px-2 select-none">
                             <div class="bg-white border border-stone-100 p-4 md:p-6 space-y-4">
                                 <div class="aspect-[4/3] bg-stone-200 w-full overflow-hidden relative group">
-                                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=800" alt="Знакомство" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                                    <img src="./img/photo11.jpg" alt="Знакомство" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                                     <div class="absolute bottom-3 left-3 bg-stone-950/40 text-white text-[10px] tracking-widest uppercase px-3 py-1 backdrop-blur-sm">
-                                        Год 2021
+                                        14 декабря 2023 года
                                     </div>
                                 </div>
                                 <div class="text-center pt-2">
                                     <h3 class="font-serif text-xl text-stone-800 mb-2">День, когда всё началось</h3>
                                     <p class="text-stone-600 text-sm font-light leading-relaxed">
-                                        София думала, что это просто дружеский кофе на полчаса. Кирилл уже мысленно выбирал кольцо и прикидывал, сколько гостей звать на свадьбу. Спойлер: кофе затянулся на 6 часов.
+                                        Фото сделано в ту самую минуту, когда мы судорожно придумывали темы для разговора и пытались есть максимально аккуратно. Кто же знал, что спустя время мы будем вместе прыгать в пустыне и сплавляться на байдарках!
                                     </p>
                                 </div>
                             </div>
@@ -135,15 +142,15 @@
                         <div class="w-full flex-shrink-0 px-2 select-none">
                             <div class="bg-white border border-stone-100 p-4 md:p-6 space-y-4">
                                 <div class="aspect-[4/3] bg-stone-200 w-full overflow-hidden relative group">
-                                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&q=80&w=800" alt="Первое путешествие" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                                    <img src="./img/photo22.jpg" alt="Cплав" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                                     <div class="absolute bottom-3 left-3 bg-stone-950/40 text-white text-[10px] tracking-widest uppercase px-3 py-1 backdrop-blur-sm">
-                                        Первый отпуск
+                                        "В одной лодке"
                                     </div>
                                 </div>
                                 <div class="text-center pt-2">
                                     <h3 class="font-serif text-xl text-stone-800 mb-2">Проверка палаткой и байдарками</h3>
                                     <p class="text-stone-600 text-sm font-light leading-relaxed">
-                                        Именно тогда мы поняли, что идеально подходим друг другу. София героически терпела комаров, а Кирилл делал вид, что точно знает, куда мы плывем (мы заблудились дважды).
+                                        Именно тогда мы поняли, что идеально подходим друг другу. София героически терпела комаров, а Кирилл делал вид, что точно знает, куда мы плывем - в светлое будущее!
                                     </p>
                                 </div>
                             </div>
@@ -153,15 +160,15 @@
                         <div class="w-full flex-shrink-0 px-2 select-none">
                             <div class="bg-white border border-stone-100 p-4 md:p-6 space-y-4">
                                 <div class="aspect-[4/3] bg-stone-200 w-full overflow-hidden relative group">
-                                    <img src="https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?auto=format&fit=crop&q=80&w=800" alt="Ремонт" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                                    <img src="./img/photo33.jpg" alt="Ремонт" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                                     <div class="absolute bottom-3 left-3 bg-stone-950/40 text-white text-[10px] tracking-widest uppercase px-3 py-1 backdrop-blur-sm">
-                                        Испытание
+                                        В полете...
                                     </div>
                                 </div>
                                 <div class="text-center pt-2">
-                                    <h3 class="font-serif text-xl text-stone-800 mb-2">Совместный быт и выбор обоев</h3>
+                                    <h3 class="font-serif text-xl text-stone-800 mb-2">Гравитации не существует!</h3>
                                     <p class="text-stone-600 text-sm font-light leading-relaxed">
-                                        Если вы пережили выбор оттенка серого цвета для стен в прихожую и сборку шкафа из ИКЕА без развода — вы готовы ко всему. Считаем этот этап нашей официальной демо-версией брака.
+                                        ..когда рядом человек, с которым хочется не просто идти по жизни, а лететь. Выше неба, ярче солнца и только вместе.
                                     </p>
                                 </div>
                             </div>
@@ -171,20 +178,36 @@
                         <div class="w-full flex-shrink-0 px-2 select-none">
                             <div class="bg-white border border-stone-100 p-4 md:p-6 space-y-4">
                                 <div class="aspect-[4/3] bg-stone-200 w-full overflow-hidden relative group">
-                                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" alt="Предложение" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                                    <img src="./img/photo44.jpg" alt="Солнце" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                                    <div class="absolute bottom-3 left-3 bg-stone-950/40 text-white text-[10px] tracking-widest uppercase px-3 py-1 backdrop-blur-sm">
+                                        Солнце, море, волны...
+                                    </div>
+                                </div>
+                                <div class="text-center pt-2">
+                                    <h3 class="font-serif text-xl text-stone-800 mb-2">Идеальный причал ❤️</h3>
+                                    <p class="text-stone-600 text-sm font-light leading-relaxed">
+                                        Подставили лица теплому ветру и поймали тот самый момент абсолютного счастья. Плечо к плечу, под одним солнцем — уверенно держим курс на 11.07.2026!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Слайд 5 -->
+                        <div class="w-full flex-shrink-0 px-2 select-none">
+                            <div class="bg-white border border-stone-100 p-4 md:p-6 space-y-4">
+                                <div class="aspect-[4/3] bg-stone-200 w-full overflow-hidden relative group">
+                                    <img src="./img/photo55.jpg" alt="Предложение" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                                     <div class="absolute bottom-3 left-3 bg-stone-950/40 text-white text-[10px] tracking-widest uppercase px-3 py-1 backdrop-blur-sm">
                                         Тот самый день
                                     </div>
                                 </div>
                                 <div class="text-center pt-2">
-                                    <h3 class="font-serif text-xl text-stone-800 mb-2">Она сказала «Ну ладно, давай»</h3>
+                                    <h3 class="font-serif text-xl text-stone-800 mb-2">Она сказала "Да!"</h3>
                                     <p class="text-stone-600 text-sm font-light leading-relaxed">
-                                        Кольцо в десерте, дрожащие руки Кирилла и София, которая сквозь слезы спросила: «Это точно не пранк?». Теперь пути назад нет, дата забронирована, карусель крутится.
+                                        ..хотя на таком морозе ее пальцы были близки к тому, чтобы сказать "Пойдем в тепло". Самый холодный день в году, который стал самым теплым для нас двоих.
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -383,103 +406,101 @@
             </div>
         </div>
     </section>
-    
-<!-- Program / Timing Section -->
+
+    <!-- ================================================================= -->
+    <!-- УМНАЯ СЕКЦИЯ ПРОГРАММЫ ДНЯ (ТАЙМЛАЙН) -->
+    <!-- ================================================================= -->
     <section id="program" class="py-20 md:py-32 bg-[#F9F7F2] px-6">
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-2xl mx-auto">
             
-            <!-- Заголовок секции -->
-            <div class="text-center mb-16">
-                <div class="text-2xl mb-4">🥂</div>
-                <h2 class="font-serif text-4xl md:text-5xl mb-6 italic text-stone-800">Программа дня</h2>
-                <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-6"></div>
-                <p class="text-stone-500 font-light text-sm max-w-md mx-auto leading-relaxed">
-                    План нашего идеального дня. Пожалуйста, ознакомьтесь с таймингом, чтобы вам было удобно планировать свое время!
-                </p>
+            <!-- Элегантный заголовок секции -->
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4 italic text-stone-800">Программа дня</h2>
+                <div class="h-[1px] w-20 bg-stone-300 mx-auto"></div>
             </div>
 
-            <!-- Таймлайн контейнер -->
-            <div class="relative border-l border-stone-300 ml-4 md:ml-32 space-y-12 py-2">
+            <!-- Контейнер таймлайна с тонкой вертикальной линией -->
+            <div class="relative border-l border-stone-200 ml-4 md:ml-32 space-y-14 py-2">
                 
-                <!-- 11:00 ЗАГС -->
-                <div class="relative group pl-8 md:pl-12">
-                    <!-- Точка на линии -->
-                    <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-stone-300 border-2 border-[#F9F7F2] group-hover:bg-stone-800 group-hover:scale-125 transition-all duration-300"></div>
+                <!-- 11:00 ЗАГС (Событие с классом zags-event — скроется для type=banket) -->
+                <div class="relative pl-8 md:pl-12 zags-event transition-all duration-500">
+                    <!-- Аккуратная точка на линии -->
+                    <div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-stone-400 border border-[#F9F7F2]"></div>
                     
-                    <!-- Время -->
-                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right">
-                        <span class="font-serif text-xl md:text-2xl font-light text-stone-400 group-hover:text-stone-800 transition-colors duration-300">11:00</span>
+                    <!-- Время слева (на десктопе выносится влево, на мобильном над текстом) -->
+                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right mb-1 md:mb-0">
+                        <span class="font-serif text-lg font-light tracking-wider text-stone-400">11:00</span>
                     </div>
                     
-                    <!-- Контент -->
+                    <!-- Описание события -->
                     <div class="space-y-1">
-                        <h3 class="font-serif text-xl text-stone-800 font-normal">Торжественная церемония в ЗАГСе</h3>
-                        <p class="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
-                            Самый официальный и трогательный момент. Ждем вас, чтобы вместе разделить эти важные минуты и услышать заветное «Да».
+                        <h3 class="font-serif text-lg text-stone-800 font-light tracking-wide">Торжественная регистрация</h3>
+                        <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide leading-relaxed max-w-md">
+                            Самый официальный и волнительный момент. Ждем вас в Центральном ЗАГСе, чтобы вместе разделить это мгновение.
                         </p>
                     </div>
                 </div>
 
-                <!-- 12:30 Прогулка -->
-                <div class="relative group pl-8 md:pl-12">
-                    <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-stone-300 border-2 border-[#F9F7F2] group-hover:bg-stone-800 group-hover:scale-125 transition-all duration-300"></div>
+                <!-- 12:30 Фотосессия (Тоже zags-event — скроется для type=banket) -->
+                <div class="relative pl-8 md:pl-12 zags-event transition-all duration-500">
+                    <div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-stone-400 border border-[#F9F7F2]"></div>
                     
-                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right">
-                        <span class="font-serif text-xl md:text-2xl font-light text-stone-400 group-hover:text-stone-800 transition-colors duration-300">12:30</span>
+                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right mb-1 md:mb-0">
+                        <span class="font-serif text-lg font-light tracking-wider text-stone-400">12:30</span>
                     </div>
                     
                     <div class="space-y-1">
-                        <h3 class="font-serif text-xl text-stone-800 font-normal">Свободное время & Прогулка</h3>
-                        <p class="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
-                            Мы уезжаем на свадебную фотосессию, а у вас есть время отдохнуть, погулять по городу, выпить кофе или обновить макияж перед банкетом.
+                        <h3 class="font-serif text-lg text-stone-800 font-light tracking-wide">Время для прогулки</h3>
+                        <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide leading-relaxed max-w-md">
+                            Пока мы отправляемся на свадебную фотосессию, вы можете немного отдохнуть, настроиться на праздничный вечер или обновить макияж.
                         </p>
                     </div>
                 </div>
 
-                <!-- 16:00 Welcome -->
-                <div class="relative group pl-8 md:pl-12">
-                    <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-stone-300 border-2 border-[#F9F7F2] group-hover:bg-stone-800 group-hover:scale-125 transition-all duration-300"></div>
+                <!-- 16:00 Сбор гостей (Видят ВСЕ гость) -->
+                <div class="relative pl-8 md:pl-12 transition-all duration-500">
+                    <div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-stone-500 border border-[#F9F7F2]"></div>
                     
-                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right">
-                        <span class="font-serif text-xl md:text-2xl font-light text-stone-400 group-hover:text-stone-800 transition-colors duration-300">16:00</span>
+                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right mb-1 md:mb-0">
+                        <span class="font-serif text-lg font-light tracking-wider text-stone-500">16:00</span>
                     </div>
                     
                     <div class="space-y-1">
-                        <h3 class="font-serif text-xl text-stone-800 font-normal">Welcome в ресторане</h3>
-                        <p class="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
-                            Встречаемся в ресторане! Вас будут ждать легкие закуски, прохладное игристое, приятная музыка и первая праздничная фотосессия.
+                        <h3 class="font-serif text-lg text-stone-800 font-light tracking-wide">Welcome & Фуршет</h3>
+                        <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide leading-relaxed max-w-md">
+                            Встречаемся на локации! Вас будут ждать легкие закуски, освежающий welcome-бар, приятная музыка и первые фотографии у фотозоны.
                         </p>
                     </div>
                 </div>
 
-                <!-- 17:00 Банкет -->
-                <div class="relative group pl-8 md:pl-12">
-                    <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-stone-300 border-2 border-[#F9F7F2] group-hover:bg-stone-800 group-hover:scale-125 transition-all duration-300"></div>
+                <!-- 17:00 Банкет (Видят ВСЕ гость) -->
+                <div class="relative pl-8 md:pl-12 transition-all duration-500">
+                    <div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-stone-500 border border-[#F9F7F2]"></div>
                     
-                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right">
-                        <span class="font-serif text-xl md:text-2xl font-light text-stone-400 group-hover:text-stone-800 transition-colors duration-300">17:00</span>
+                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right mb-1 md:mb-0">
+                        <span class="font-serif text-lg font-light tracking-wider text-stone-500">17:00</span>
                     </div>
                     
                     <div class="space-y-1">
-                        <h3 class="font-serif text-xl text-stone-800 font-normal">Начало банкета</h3>
-                        <p class="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
-                            Время для теплых тостов, уютного ужина, веселых интерактивов и, конечно же, зажигательных танцев. 
+                        <h3 class="font-serif text-lg text-stone-800 font-light tracking-wide">Свадебный ужин</h3>
+                        <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide leading-relaxed max-w-md">
+                            Время для самых теплых слов, искренних улыбок, праздничного ужина и, конечно же, танцев.
                         </p>
                     </div>
                 </div>
 
-                <!-- 21:00 Финал -->
-                <div class="relative group pl-8 md:pl-12">
-                    <div class="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-stone-300 border-2 border-[#F9F7F2] group-hover:bg-stone-800 group-hover:scale-125 transition-all duration-300"></div>
+                <!-- 21:30 Финал (Видят ВСЕ гость) -->
+                <div class="relative pl-8 md:pl-12 transition-all duration-500">
+                    <div class="absolute -left-[4.5px] top-2 w-2 h-2 rounded-full bg-stone-500 border border-[#F9F7F2]"></div>
                     
-                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right">
-                        <span class="font-serif text-xl md:text-2xl font-light text-stone-400 group-hover:text-stone-800 transition-colors duration-300">21:00</span>
+                    <div class="md:absolute md:-left-32 md:top-0 md:w-24 text-left md:text-right mb-1 md:mb-0">
+                        <span class="font-serif text-lg font-light tracking-wider text-stone-500">21:30</span>
                     </div>
                     
                     <div class="space-y-1">
-                        <h3 class="font-serif text-xl text-stone-800 font-normal">Праздничный торт & Яркий финал</h3>
-                        <p class="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
-                            Разрезаем красивый торт и завершаем официальную часть. Но это не повод расходиться — мы продолжаем танцевать до самого закрытия!
+                        <h3 class="font-serif text-lg text-stone-800 font-light tracking-wide">Торт и завершение вечера</h3>
+                        <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide leading-relaxed max-w-md">
+                            Разрезаем свадебный торт под бенгальские огни. Официальная программа подойдет к концу, но мы продолжим общение в свободном формате.
                         </p>
                     </div>
                 </div>
@@ -488,45 +509,288 @@
         </div>
     </section>
 
-    <!-- ДОБАВЛЕНО: RSVP Section (Форма подтверждения) -->
-    <section id="rsvp" class="py-20 md:py-32 bg-[#F9F7F2] px-6">
-        <div class="max-w-3xl mx-auto text-center border border-stone-200 bg-white p-8 md:p-16 shadow-sm">
-            <h2 class="font-serif text-3xl md:text-4xl mb-4 italic text-stone-800">Ждем вашего ответа</h2>
-            <div class="h-[1px] w-16 bg-stone-300 mx-auto mb-8"></div>
-            <p class="text-stone-600 mb-8 font-light text-sm">Пожалуйста, подтвердите свое присутствие до 1 июня 2026 года.</p>
+<!-- ================================================================= -->
+<!-- СЕКЦИЯ RSVP (ПОДТВЕРЖДЕНИЕ ПРИСУТСТВИЯ С НАПИТКАМИ) -->
+<!-- ================================================================= -->
+<section id="rsvp" class="py-20 md:py-32 bg-white px-6">
+    <div class="max-w-xl mx-auto text-center">
+        
+        <!-- Элегантный заголовок -->
+        <h2 class="font-serif text-3xl md:text-4xl mb-4 italic text-stone-800">Подтверждение присутствия</h2>
+        <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-8"></div>
+        
+        <!-- ID "rsvp-text" для изменения глаголов (ты/вы) -->
+        <p id="rsvp-text" class="text-stone-600 font-light text-sm mb-12 leading-relaxed">
+            Пожалуйста, подтвердите ваше присутствие до [Укажите дату]:
+        </p>
+        
+        <!-- Форма -->
+        <form action="#" method="POST" class="text-left space-y-8 max-w-md mx-auto">
             
-            <form class="space-y-6 text-left" action="#" method="POST">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-stone-500 mb-2 font-medium">Имя и Фамилия</label>
-                        <input type="text" required class="w-full border-b border-stone-300 py-2 bg-transparent focus:outline-none focus:border-stone-800 transition-colors text-sm text-stone-700" placeholder="Иван Иванов">
-                    </div>
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-stone-500 mb-2 font-medium">Присутствие</label>
-                        <select required class="w-full border-b border-stone-300 py-2 bg-transparent focus:outline-none focus:border-stone-800 transition-colors text-sm text-stone-700 cursor-pointer">
-                            <option value="" disabled selected>Выберите вариант...</option>
-                            <option value="yes">С удовольствием приду</option>
-                            <option value="no">К сожалению, не смогу</option>
-                        </select>
-                    </div>
-                </div>
+            <!-- КОНТЕЙНЕР ДЛЯ ИМЕН (Сюда скрипт вставляет поля ввода) -->
+            <div id="dynamic-guest-inputs" class="space-y-6">
                 <div>
-                    <label class="block text-[10px] uppercase tracking-widest text-stone-500 mb-2 font-medium">Предпочтения по напиткам</label>
-                    <input type="text" class="w-full border-b border-stone-300 py-2 bg-transparent focus:outline-none focus:border-stone-800 transition-colors text-sm text-stone-700" placeholder="Красное сухое, белое полусладкое, б/а...">
+                    <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Ваше имя и фамилия</label>
+                    <input type="text" name="guest_name_1" required 
+                           class="w-full bg-transparent border-b border-stone-300 py-3 text-stone-800 focus:outline-none focus:border-stone-800 font-light transition-colors" 
+                           placeholder="Введите ваше имя">
                 </div>
-                <div class="pt-6 text-center">
-                    <button type="submit" class="inline-block px-10 py-4 bg-stone-800 text-white text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium hover:bg-stone-700 transition-all duration-300 shadow-sm hover:shadow-md">
-                        Отправить
-                    </button>
+            </div>
+
+            <!-- Блок выбора присутствия -->
+            <div class="space-y-4 pt-2">
+                <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Сможете ли вы прийти?</label>
+                <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-3 sm:space-y-0">
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="radio" name="attendance" value="yes" checked class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span id="rsvp-yes-text" class="group-hover:text-stone-900 transition-colors">Мы придем</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="radio" name="attendance" value="no" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span id="rsvp-no-text" class="group-hover:text-stone-900 transition-colors">Не сможем прийти</span>
+                    </label>
                 </div>
-            </form>
-        </div>
-    </section>
+            </div>
+
+            <!-- БЛОК ПРЕДПОЧТЕНИЙ ПО НАПИТКАМ -->
+            <div class="space-y-4 pt-2">
+                <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Пожелания по напиткам</label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="checkbox" name="drinks" value="wine_red" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span class="group-hover:text-stone-900 transition-colors">Красное вино</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="checkbox" name="drinks" value="wine_white" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span class="group-hover:text-stone-900 transition-colors">Белое вино</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="checkbox" name="drinks" value="sparkling" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span class="group-hover:text-stone-900 transition-colors">Игристое вино</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="checkbox" name="drinks" value="strong" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span class="group-hover:text-stone-900 transition-colors">Крепкий алкоголь</span>
+                    </label>
+                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                        <input type="checkbox" name="drinks" value="non_alcoholic" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                        <span class="group-hover:text-stone-900 transition-colors">Безалкогольные напитки</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Минималистичная кнопка отправки -->
+            <div class="pt-6">
+                <button type="submit" class="w-full bg-stone-800 text-white font-light text-sm uppercase tracking-widest py-4 hover:bg-stone-700 transition-all duration-300 shadow-sm">
+                    Отправить ответ
+                </button>
+            </div>
+        </form>
+
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="py-8 bg-white text-center">
         <p class="font-serif italic text-stone-400 text-sm">До встречи на нашем празднике!</p>
     </footer>
 
+    <!-- ================================================================= -->
+    <!-- ЕДИНЫЙ СКРИПТ АВТОМАТИЗАЦИИ (ВСТАВИТЬ ПЕРЕД </body>) -->
+    <!-- ================================================================= -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // 1. БАЗА ДАННЫХ ГОСТЕЙ (Столбец B : Столбец А вашей таблицы)
+        // Просто дополняйте этот список новыми строками по аналогии.
+        // Код слева должен быть строго латиницей (как в столбце B).
+        const GUESTS_DATABASE = {
+            "ain": "Андрей Владиславович и Ирина Александровна с сыном Николаем",
+            "an": "Александр Викторович и Наталья Геннадьевна",
+            "nd": "Никита и Дарья",
+            "ma": "Максим и Анна",
+            "nn": "Нина Николаевна",
+            "na": "Наталья Андреевна",
+            "vt": "Валерий и Татьяна",
+            "mk": "Маргарита и Камиль",
+            "a": "Анастасия",
+            "nl": "Николай и Людмила"
+        };
+
+        // 2. Получаем параметры из адресной строки (из формулы в столбце F)
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestCode = urlParams.get('guest'); // Столбец B (код)
+        const invType = urlParams.get('type');    // Столбец C (full/banket)
+        const guestCount = parseInt(urlParams.get('count')) || 1; // Столбец D (кол-во)
+        const appeal = urlParams.get('o');        // Столбец E (ты/вы)
+
+        // Ищем полное имя в нашей базе по короткому коду
+        const fullName = GUESTS_DATABASE[guestCode];
+
+        // ==========================================================
+        // ШАГ 1: ПОДСТАНОВКА ИМЕНИ В HERO-БЛОК (ГЛАВНЫЙ ЭКРАН)
+        // ==========================================================
+        if (fullName) {
+            const welcomeElement = document.getElementById('welcome-text');
+            if (welcomeElement) {
+                welcomeElement.innerText = fullName;
+            }
+        }
+
+        // ==========================================================
+        // ШАГ 2: УМНЫЙ ТАЙМЛАЙН (СКРЫТИЕ ЗАГСА ДЛЯ ТИПА BANKET)
+        // ==========================================================
+        if (invType === 'banket') {
+            const zagsEvents = document.querySelectorAll('.zags-event');
+            zagsEvents.forEach(element => {
+                element.style.display = 'none';
+            });
+        }
+
+        // ==========================================================
+        // ШАГ 3: НАСТРОЙКА ТЕКСТОВ И ГЛАГОЛОВ В ФОРМЕ RSVP (ТЫ / ВЫ)
+        // ==========================================================
+        const rsvpText = document.getElementById('rsvp-text');
+        const rsvpYes = document.getElementById('rsvp-yes-text');
+        const rsvpNo = document.getElementById('rsvp-no-text');
+
+        if (appeal && appeal.toLowerCase() === 'ты') {
+            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтверди своё присутствие до [Укажите дату]:";
+            if (rsvpYes) rsvpYes.innerText = "Я приду";
+            if (rsvpNo) rsvpNo.innerText = "Не смогу прийти";
+        } else {
+            // Если написано "вы" или параметр пустой — оставляем вежливое множественное число
+            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтвердите ваше присутствие до [Укажите дату]:";
+            if (rsvpYes) rsvpYes.innerText = "Мы придем";
+            if (rsvpNo) rsvpNo.innerText = "Не сможем прийти";
+        }
+
+        // ==========================================================
+        // ШАГ 4: ДИНАМИЧЕСКАЯ ГЕНЕРАЦИЯ ПОЛЕЙ ВВОДА ИМЕН (COUNT)
+        // ==========================================================
+        const inputsContainer = document.getElementById('dynamic-guest-inputs');
+        
+        if (inputsContainer) {
+            inputsContainer.innerHTML = ''; // Очищаем дефолтное стартовое поле
+
+            // Ситуация А: Гость один и мы знаем его имя из базы — создаем предзаполненное поле
+            if (guestCount === 1 && fullName) {
+                createInputField(inputsContainer, 1, fullName, true);
+            } else {
+                // Ситуация Б: Гостей несколько (пара или семья) — создаем пустые поля для каждого,
+                // чтобы они сами вписали свои имена (это нужно для корректных списков рассадки)
+                for (let i = 1; i <= guestCount; i++) {
+                    createInputField(inputsContainer, i, '', false);
+                }
+            }
+        }
+
+        // Функция-помощник, которая генерирует HTML-код полей в изящном стиле сайта
+        function createInputField(container, index, value = '', isReadOnly = false) {
+            const div = document.createElement('div');
+            div.className = "space-y-2"; // отступ между блоками полей
+            
+            const label = document.createElement('label');
+            label.className = "block text-xs uppercase tracking-wider text-stone-400 mb-2";
+            // Если count > 1, подписываем: Имя гостя №1, Имя гостя №2...
+            label.innerText = guestCount > 1 ? `Имя гостя №${index}` : "Ваше имя и фамилия";
+            
+            const input = document.createElement('input');
+            input.type = "text";
+            input.name = `guest_name_${index}`;
+            input.required = true;
+            input.value = value;
+            // Точное совпадение с исходным изящным дизайном: тонкая линия, шрифт, отступы
+            input.className = "w-full bg-transparent border-b border-stone-300 py-3 text-stone-800 focus:outline-none focus:border-stone-800 font-light transition-colors";
+            input.placeholder = guestCount > 1 ? `Например, Елена` : "Введите ваше имя";
+            
+            // Блокируем поле для одиночных гостей, чтобы они случайно не стерли себя
+            if (isReadOnly) {
+                input.readOnly = true;
+                input.style.opacity = "0.6";
+                input.style.cursor = "not-allowed";
+            }
+
+            div.appendChild(label);
+            div.appendChild(input);
+            container.appendChild(div);
+        }
+        // ==========================================================
+        // ШАГ 5:ОТПРАВКА ФОРМЫ RSVP В GOOGLE ТАБЛИЦУ
+        // ==========================================================
+        const rsvpForm = document.querySelector('#rsvp form');
+        
+        if (rsvpForm) {
+            rsvpForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Запрещаем стандартную перезагрузку страницы
+                
+                const submitButton = rsvpForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerText;
+                submitButton.innerText = "ОТПРАВЛЯЕМ...";
+                submitButton.disabled = true;
+
+                // 1. Собираем имена всех заполненных гостей в одну строку
+                const nameInputs = rsvpForm.querySelectorAll('input[name^="guest_name_"]');
+                let namesArray = [];
+                nameInputs.forEach(input => {
+                    if(input.value.trim() !== '') namesArray.push(input.value.trim());
+                });
+                // Если динамические поля не создались, берем дефолтное имя
+                if(namesArray.length === 0) {
+                    const defaultInput = rsvpForm.querySelector('input[name="guest_names_default"]');
+                    if(defaultInput) namesArray.push(defaultInput.value.trim());
+                }
+                const allNames = namesArray.join(', ');
+
+                // 2. Получаем статус присутствия
+                const attendanceInput = rsvpForm.querySelector('input[name="attendance"]:checked');
+                const attendanceText = attendanceInput ? (attendanceInput.value === 'yes' ? 'Приду(ем)' : 'Не смогу(ем)') : 'Нет ответа';
+
+                // 3. Собираем выбранные напитки
+                const drinkCheckboxes = rsvpForm.querySelectorAll('input[name="drinks"]:checked');
+                let drinksArray = [];
+                drinkCheckboxes.forEach(cb => {
+                    drinksArray.push(cb.parentNode.innerText.trim());
+                });
+                const allDrinks = drinksArray.length > 0 ? drinksArray.join(', ') : 'Не выбрано / Безалкогольные';
+
+                // Данные для отправки
+                const formData = {
+                    names: allNames,
+                    attendance: attendanceText,
+                    drinks: attendanceText === 'Приду(ем)' ? allDrinks : '—' // Если не придут, напитки не нужны
+                };
+
+                // ВСТАВЬТЕ СЮДА СВОЮ ССЫЛКУ ИЗ ШАГА 1 (URL веб-приложения)
+                const TELEMETRY_URL = "https://script.google.com/macros/s/AKfycbyglLWw4VW4s1bsTdDV9mXP5IBoXwzhSHqOMWIjDKMUUcR3QD7pZP132Q6YWMEGZzIlqQ/exec";
+
+                // Отправляем запрос
+                fetch(TELEMETRY_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Важно для работы с Google Apps Script без настройки CORS
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                })
+                .then(() => {
+                    // Поскольку режим no-cors не возвращает ответ, мы просто считаем, что все ок через секунду
+                    rsvpForm.innerHTML = `
+                        <div class="text-center py-12 space-y-4 animate-fade-in">
+                            <div class="text-4xl text-stone-400">✨</div>
+                            <h3 class="font-serif text-2xl text-stone-800 italic">Спасибо за ответ!</h3>
+                            <p class="text-stone-500 font-light text-sm tracking-wide">Мы учли ваши пожелания и с нетерпением ждем встречи.</p>
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.');
+                    submitButton.innerText = originalButtonText;
+                    submitButton.disabled = false;
+                });
+            });
+        }
+    });
+    </script>
 </body>
 </html>
