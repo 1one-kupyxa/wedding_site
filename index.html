@@ -381,32 +381,71 @@
 
     <!-- Location Section -->
     <section id="location" class="py-20 md:py-32 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="text-2xl mb-4">📍</div>
-            <h2 class="font-serif text-4xl md:text-5xl mb-6 italic text-stone-800">Место проведения</h2>
-            <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-8"></div>
+        <div class="max-w-4xl mx-auto">
             
-            <p class="font-serif text-2xl text-stone-800 mb-2">Ресторан «Белый парус»</p>
-            <p class="text-stone-500 font-light mb-8">г. Нижний Новгород, ул. Слобода Печеры, 98с</p>
+            <!-- Заголовок секции -->
+            <div class="text-center mb-12 md:mb-16">
+                <div class="text-2xl mb-4">📍</div>
+                <h2 class="font-serif text-4xl md:text-5xl mb-6 italic text-stone-800">Место проведения</h2>
+                <div class="h-[1px] w-20 bg-stone-300 mx-auto"></div>
+            </div>
 
-            <p class="text-stone-600 max-w-xl mx-auto mb-10 text-sm font-light leading-relaxed">
-                Наш свадебный ужин пройдет в ресторане «Белый парус» на берегу Гребного канала. Празднуем на 2-м этаже — в светлом зале с просторной верандой и великолепным видом на Волгу. Мы проведем этот незабываемый вечер в окружении красоты, близких людей, танцев и теплых пожеланий под открытым небом!
-            </p>
+            <!-- Контейнер для локаций (Исправлено: убрали space-y-20 во избежание фантомных отступов) -->
+            <div>
 
-            <!-- ИСПРАВЛЕНО: убрал лишнюю скобку < перед div -->
-            <div class="w-full h-[350px] md:h-[450px] border border-stone-200 shadow-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
-                <iframe 
-                    src="https://yandex.ru/map-widget/v1/?ll=44.062035%2C56.329241&mode=search&ol=biz&oid=1107579899&z=16&text=Ресторан+Белый+парус" 
-                    width="100%" 
-                    height="100%" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    style="position:relative;">
-                </iframe>
+                <!-- БЛОК ЗАГСА (Скрывается скриптом через класс zags-only) -->
+                <div class="zags-only text-center space-y-6 mb-20">
+                    <div class="text-xs tracking-widest uppercase text-stone-400">— Официальная часть —</div>
+                    <p class="font-serif text-2xl text-stone-800 mb-2">Нижегородский Дом бракосочетания</p>
+                    <p class="text-stone-500 font-light mb-4">г. Нижний Новгород, ул. Малая Покровская, 9</p>
+                    
+                    <p class="text-stone-600 max-w-xl mx-auto text-sm font-light leading-relaxed mb-8">
+                        Самый важный и волнительный момент нашего дня — официальная регистрация. Будем очень рады видеть вас, разделить эти первые минуты создания нашей семьи и, конечно же, сделать красивые кадры на память!
+                    </p>
+
+                    <!-- Карта ЗАГСа с маркером организации -->
+                    <div class="w-full h-[350px] md:h-[450px] border border-stone-200 shadow-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
+                        <iframe 
+                            src="https://yandex.ru/map-widget/v1/?ll=43.981442%2C56.319114&mode=search&ol=biz&oid=1023405452&z=16&text=Дом+бракосочетания" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            style="position:relative;">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Разделитель -->
+                    <div class="h-[1px] w-10 bg-stone-200 mx-auto pt-12"></div>
+                </div>
+
+
+                <!-- БЛОК РЕСТОРАНА (Виден всем всегда) -->
+                <div class="text-center space-y-6">
+                    <div class="text-xs tracking-widest uppercase text-stone-400">— Свадебный ужин —</div>
+                    <p class="font-serif text-2xl text-stone-800 mb-2">Ресторан «Белый парус»</p>
+                    <p class="text-stone-500 font-light mb-4">г. Нижний Новгород, ул. Слобода Печеры, 98с</p>
+
+                    <p class="text-stone-600 max-w-xl mx-auto text-sm font-light leading-relaxed mb-8">
+                        Наш праздничный банкет пройдет на берегу Гребного канала. Ждем вас на 3-м этаже — в светлом зале с просторной верандой и великолепным видом на Волгу. Мы проведем этот незабываемый вечер в окружении красоты, танцев и теплых пожеланий под открытым небом!
+                    </p>
+
+                    <!-- Карта Ресторана с маркером организации -->
+                    <div class="w-full h-[350px] md:h-[450px] border border-stone-200 shadow-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out">
+                        <iframe 
+                            src="https://yandex.ru/map-widget/v1/?ll=44.062035%2C56.329241&mode=search&ol=biz&oid=1107579899&z=16&text=Ресторан+Белый+парус" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            style="position:relative;">
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
     <!-- ================================================================= -->
     <!-- УМНАЯ СЕКЦИЯ ПРОГРАММЫ ДНЯ (ТАЙМЛАЙН) -->
     <!-- ================================================================= -->
@@ -644,6 +683,16 @@
             const zagsEvents = document.querySelectorAll('.zags-event');
             zagsEvents.forEach(element => {
                 element.style.display = 'none';
+            });
+        }
+
+        // ==========================================================
+        // ШАГ 3: УМНАЯ ЛОКАЦИЯ (СКРЫТИЕ КАРТЫ ЗАГСА ДЛЯ ТИПА BANKET)
+        // ==========================================================
+        if (invType === 'banket') {
+            const zagsLocations = document.querySelectorAll('.zags-only');
+            zagsLocations.forEach(element => {
+                element.classList.add('hidden'); // Жестко скрываем блок ЗАГСа со всеми картами и отступами
             });
         }
 
