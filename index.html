@@ -44,52 +44,59 @@
     <!-- ================================================================= -->
     <!-- ОБЛЕГЧЕННЫЙ ГЛАВНЫЙ БЛОК (HERO SECTION) С КНОПКОЙ RSVP -->
     <!-- ================================================================= -->
-    <section class="relative min-h-screen flex items-center justify-center bg-[#F9F7F2] px-6 py-20 overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center bg-[#FBF9F4] px-6 py-20 overflow-hidden">
         
-        <!-- Декоративный воздушный фон -->
-        <div class="absolute inset-0 opacity-30 pointer-events-none">
-            <div class="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-stone-200/50 filter blur-3xl"></div>
-            <div class="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-stone-200/50 filter blur-3xl"></div>
+        <!-- Декоративный воздушный фон (чуть контрастнее, чтобы освежить подложку) -->
+        <div class="absolute inset-0 opacity-40 pointer-events-none">
+            <div class="absolute top-[-15%] left-[-15%] w-[65vw] h-[65vw] rounded-full bg-stone-200/60 filter blur-3xl"></div>
+            <div class="absolute bottom-[-15%] right-[-15%] w-[65vw] h-[65vw] rounded-full bg-stone-200/60 filter blur-3xl"></div>
         </div>
 
-        <div class="relative max-w-3xl mx-auto text-center space-y-10 z-10">
+        <div class="relative max-w-3xl mx-auto text-center space-y-12 z-10">
             
-            <!-- Верхняя маленькая плашка -->
-            <p class="text-[10px] uppercase tracking-[0.4em] text-stone-400 font-light">
-                Приглашение на свадьбу
-            </p>
+            <!-- Верхняя плашка: Дата больше не потеряется -->
+            <div class="space-y-3 flex flex-col items-center">
+                <p class="text-[11px] uppercase tracking-[0.4em] text-stone-500 font-medium">
+                    Приглашение на свадьбу
+                </p>
+                <div class="flex items-center space-x-3 text-stone-600 my-1">
+                    <span class="h-[1px] w-6 bg-stone-300"></span>
+                    <p class="font-serif text-lg md:text-xl tracking-[0.2em] text-stone-700 font-medium">
+                        11.07.2026
+                    </p>
+                    <span class="h-[1px] w-6 bg-stone-300"></span>
+                </div>
+                <div class="text-[10px] text-stone-400">✦</div>
+            </div>
             
-            <!-- Главный изящный заголовок (Имена молодоженов) -->
-            <h1 class="font-serif text-5xl md:text-7xl font-extralight text-stone-800 tracking-wide leading-none">
-                Кирилл <span class="font-light italic text-stone-400">&</span> София
+            <!-- Главный изящный заголовок (Поиграли со шрифтами: имена стали выразительнее) -->
+            <h1 class="font-serif text-5xl md:text-7xl font-normal text-stone-850 tracking-wide leading-tight">
+                Кирилл <span class="font-light italic text-stone-400 block md:inline my-1 md:my-0 md:mx-3">&</span> София
             </h1>
 
-            <!-- Тонкая разделительная линия -->
-            <div class="h-[1px] w-12 bg-stone-300 mx-auto my-4"></div>
-
-            <!-- Блок персонального приветствия -->
-            <div class="space-y-4 max-w-xl mx-auto">
+            <!-- Блок персонального приветствия (Шрифт крупнее и плотнее, отличная читаемость) -->
+            <div class="space-y-4 max-w-xl mx-auto pt-2">
                 <!-- Сюда скрипт подставит имя из таблицы -->
-                <h2 id="welcome-text" class="font-serif text-xl md:text-2xl font-light italic text-stone-600 tracking-wider leading-relaxed">
+                <h2 id="welcome-text" class="font-serif text-2xl md:text-3xl font-normal italic text-stone-750 tracking-wider">
                     Дорогие друзья!
                 </h2>
                 
-                <p class="text-stone-400 font-light text-xs md:text-sm tracking-wide max-w-sm mx-auto leading-relaxed pt-1">
+                <p class="text-stone-600 font-normal text-sm md:text-base tracking-wide max-w-md mx-auto leading-relaxed">
                     Мы рады пригласить вас разделить с нами особенный день начала нашей семейной истории.
                 </p>
             </div>
 
-            <!-- ЭЛЕГАНТНАЯ КНОПКА RSVP -->
-            <div class="pt-2">
-                <a href="#rsvp" class="inline-block border border-stone-400 text-stone-800 font-light text-xs uppercase tracking-[0.2em] px-8 py-3.5 hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-all duration-300 shadow-sm">
+            <!-- ЭЛЕГАНТНАЯ КНОПКА RSVP (Светлая, утонченная, но заметная за счет рамки) -->
+            <div class="pt-6">
+                <a href="#rsvp" class="inline-block border border-stone-500 text-stone-800 font-medium text-xs uppercase tracking-[0.25em] px-10 py-4 hover:bg-stone-800 hover:text-white hover:border-stone-800 transition-all duration-400 shadow-sm">
                     Подтвердить присутствие
                 </a>
             </div>
 
             <!-- Минималистичная стрелка вниз -->
-            <div class="pt-6 animate-pulse">
-                <a href="#program" class="text-stone-300 hover:text-stone-600 transition-colors inline-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-5 h-5 mx-auto">
+            <div class="pt-8 animate-bounce">
+                <a href="#program" class="text-stone-400 hover:text-stone-700 transition-colors inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6 mx-auto">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
                     </svg>
                 </a>
@@ -308,51 +315,58 @@
     </script>
 
     <!-- Dress-code Section -->
-     <section id="dress-code" class="py-20 md:py-32 px-6 bg-white">
+    <section id="dress-code" class="py-20 md:py-32 px-6 bg-white">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-serif text-4xl md:text-5xl mb-6 italic text-stone-800">Дресс-код</h2>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6 italic text-stone-850">Дресс-код</h2>
             <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-8"></div>
             
-            <p class="text-stone-600 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+            <p class="text-stone-600 max-w-2xl mx-auto mb-14 font-normal text-sm md:text-base tracking-wide leading-relaxed">
                 Будем рады, если при выборе праздничного образа вы поддержите цветовую гамму нашей свадьбы. Мы стремимся к эстетике минимализма и природных тонов.
             </p>
 
-            <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-12">
+            <!-- Цветовая палитра -->
+            <div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-14">
+                <!-- НОВЫЙ ЦВЕТ: Пыльно-голубой -->
+                <div class="flex flex-col items-center space-y-2 group">
+                    <div class="w-16 h-16 rounded-full bg-[#B3C7D3] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Ниагара</span>
+                </div>
+                
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#A8B5A2] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Шалфей</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Шалфей</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#D4AF37] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Охра</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Охра</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#F7E8D6] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Кремовый</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Кремовый</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#E8C4A0] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Пудровый</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Пудровый</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#B8B0A8] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Пепельный</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Пепельный</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#85674F] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Мокко</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Мокко</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#4B8574] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Хвойный</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Хвойный</span>
                 </div>
                 <div class="flex flex-col items-center space-y-2 group">
                     <div class="w-16 h-16 rounded-full bg-[#9B8575] shadow-inner transform group-hover:scale-110 transition duration-300"></div>
-                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Какао</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium text-stone-500">Какао</span>
                 </div>
             </div>
 
-            <p class="text-xs uppercase tracking-widest text-stone-400 font-medium">
+            <p class="text-xs uppercase tracking-[0.3em] text-stone-500 font-semibold">
                 Стиль: Коктейль / Элегантный минимализм
             </p>
         </div>
@@ -548,86 +562,63 @@
         </div>
     </section>
 
-<!-- ================================================================= -->
-<!-- СЕКЦИЯ RSVP (ПОДТВЕРЖДЕНИЕ ПРИСУТСТВИЯ С НАПИТКАМИ) -->
-<!-- ================================================================= -->
-<section id="rsvp" class="py-20 md:py-32 bg-white px-6">
-    <div class="max-w-xl mx-auto text-center">
-        
-        <!-- Элегантный заголовок -->
-        <h2 class="font-serif text-3xl md:text-4xl mb-4 italic text-stone-800">Подтверждение присутствия</h2>
-        <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-8"></div>
-        
-        <!-- ID "rsvp-text" для изменения глаголов (ты/вы) -->
-        <p id="rsvp-text" class="text-stone-600 font-light text-sm mb-12 leading-relaxed">
-            Пожалуйста, подтвердите ваше присутствие до [Укажите дату]:
-        </p>
-        
-        <!-- Форма -->
-        <form action="#" method="POST" class="text-left space-y-8 max-w-md mx-auto">
+    <!-- ================================================================= -->
+    <!-- СЕКЦИЯ RSVP (ПОДТВЕРЖДЕНИЕ ПРИСУТСТВИЯ С НАПИТКАМИ) -->
+    <!-- ================================================================= -->
+    <section id="rsvp" class="py-20 md:py-32 bg-white px-6">
+        <div class="max-w-xl mx-auto text-center">
             
-            <!-- КОНТЕЙНЕР ДЛЯ ИМЕН (Сюда скрипт вставляет поля ввода) -->
-            <div id="dynamic-guest-inputs" class="space-y-6">
-                <div>
-                    <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Ваше имя и фамилия</label>
-                    <input type="text" name="guest_name_1" required 
-                           class="w-full bg-transparent border-b border-stone-300 py-3 text-stone-800 focus:outline-none focus:border-stone-800 font-light transition-colors" 
-                           placeholder="Введите ваше имя">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4 italic text-stone-800">Подтверждение присутствия</h2>
+            <div class="h-[1px] w-20 bg-stone-300 mx-auto mb-8"></div>
+            
+            <p id="rsvp-text" class="text-stone-600 font-light text-sm mb-12 leading-relaxed">
+                Пожалуйста, подтвердите ваше присутствие до 01.06.2026:
+            </p>
+            
+            <form action="#" method="POST" class="text-left space-y-8 max-w-md mx-auto">
+                
+                <div id="dynamic-guest-inputs" class="space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Ваше имя и фамилия</label>
+                        <input type="text" name="guest_name_1" required 
+                            class="w-full bg-transparent border-b border-stone-300 py-3 text-stone-800 focus:outline-none focus:border-stone-800 font-light transition-colors" 
+                            placeholder="Введите ваше имя">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Блок выбора присутствия -->
-            <div class="space-y-4 pt-2">
-                <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Сможете ли вы прийти?</label>
-                <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-3 sm:space-y-0">
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="radio" name="attendance" value="yes" checked class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span id="rsvp-yes-text" class="group-hover:text-stone-900 transition-colors">Мы придем</span>
-                    </label>
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="radio" name="attendance" value="no" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span id="rsvp-no-text" class="group-hover:text-stone-900 transition-colors">Не сможем прийти</span>
-                    </label>
+                <div class="space-y-4 pt-2">
+                    <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Сможете ли вы прийти?</label>
+                    <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-3 sm:space-y-0">
+                        <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                            <input type="radio" name="attendance" value="yes" checked class="w-4 h-4 accent-stone-800 cursor-pointer">
+                            <span id="rsvp-yes-text" class="group-hover:text-stone-900 transition-colors">Мы придем</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
+                            <input type="radio" name="attendance" value="no" class="w-4 h-4 accent-stone-800 cursor-pointer">
+                            <span id="rsvp-no-text" class="group-hover:text-stone-900 transition-colors">Не сможем прийти</span>
+                        </label>
+                    </div>
                 </div>
-            </div>
 
-            <!-- БЛОК ПРЕДПОЧТЕНИЙ ПО НАПИТКАМ -->
-            <div class="space-y-4 pt-2">
-                <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Пожелания по напиткам</label>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="checkbox" name="drinks" value="wine_red" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span class="group-hover:text-stone-900 transition-colors">Красное вино</span>
-                    </label>
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="checkbox" name="drinks" value="wine_white" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span class="group-hover:text-stone-900 transition-colors">Белое вино</span>
-                    </label>
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="checkbox" name="drinks" value="sparkling" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span class="group-hover:text-stone-900 transition-colors">Игристое вино</span>
-                    </label>
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="checkbox" name="drinks" value="strong" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span class="group-hover:text-stone-900 transition-colors">Крепкий алкоголь</span>
-                    </label>
-                    <label class="flex items-center space-x-3 text-stone-700 font-light text-sm cursor-pointer group">
-                        <input type="checkbox" name="drinks" value="non_alcoholic" class="w-4 h-4 accent-stone-800 cursor-pointer">
-                        <span class="group-hover:text-stone-900 transition-colors">Безалкогольные напитки</span>
-                    </label>
+                <div class="space-y-3 pt-2">
+                    <label class="block text-xs uppercase tracking-wider text-stone-400 mb-2">Пожелания по напиткам</label>
+                    <textarea name="drinks_preferences" rows="3" 
+                            class="w-full bg-transparent border-b border-stone-300 py-3 text-stone-800 focus:outline-none focus:border-stone-800 font-light transition-colors resize-none" 
+                            placeholder="Например: красное полусладкое вино, виски, безалкогольное пиво..."></textarea>
+                    <p class="text-[11px] text-stone-400 font-light leading-relaxed">
+                        Напишите ваши предпочтения по алкогольным и безалкогольным напиткам, чтобы мы могли составить идеальный бар.
+                    </p>
                 </div>
-            </div>
 
-            <!-- Минималистичная кнопка отправки -->
-            <div class="pt-6">
-                <button type="submit" class="w-full bg-stone-800 text-white font-light text-sm uppercase tracking-widest py-4 hover:bg-stone-700 transition-all duration-300 shadow-sm">
-                    Отправить ответ
-                </button>
-            </div>
-        </form>
+                <div class="pt-6">
+                    <button type="submit" class="w-full bg-stone-800 text-white font-light text-sm uppercase tracking-widest py-4 hover:bg-stone-700 transition-all duration-300 shadow-sm">
+                        Отправить ответ
+                    </button>
+                </div>
+            </form>
 
-    </div>
-</section>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="py-8 bg-white text-center">
@@ -704,12 +695,12 @@
         const rsvpNo = document.getElementById('rsvp-no-text');
 
         if (appeal && appeal.toLowerCase() === 'ты') {
-            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтверди своё присутствие до [Укажите дату]:";
+            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтверди своё присутствие до 01.06.2026:";
             if (rsvpYes) rsvpYes.innerText = "Я приду";
             if (rsvpNo) rsvpNo.innerText = "Не смогу прийти";
         } else {
             // Если написано "вы" или параметр пустой — оставляем вежливое множественное число
-            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтвердите ваше присутствие до [Укажите дату]:";
+            if (rsvpText) rsvpText.innerText = "Пожалуйста, подтвердите ваше присутствие до 01.06.2026:";
             if (rsvpYes) rsvpYes.innerText = "Мы придем";
             if (rsvpNo) rsvpNo.innerText = "Не сможем прийти";
         }
@@ -765,10 +756,10 @@
             container.appendChild(div);
         }
         // ==========================================================
-        // ШАГ 5:ОТПРАВКА ФОРМЫ RSVP В GOOGLE ТАБЛИЦУ
+        // ШАГ 5: ОТПРАВКА ФОРМЫ RSVP В GOOGLE ТАБЛИЦУ
         // ==========================================================
         const rsvpForm = document.querySelector('#rsvp form');
-        
+
         if (rsvpForm) {
             rsvpForm.addEventListener('submit', function(e) {
                 e.preventDefault(); // Запрещаем стандартную перезагрузку страницы
@@ -795,22 +786,19 @@
                 const attendanceInput = rsvpForm.querySelector('input[name="attendance"]:checked');
                 const attendanceText = attendanceInput ? (attendanceInput.value === 'yes' ? 'Приду(ем)' : 'Не смогу(ем)') : 'Нет ответа';
 
-                // 3. Собираем выбранные напитки
-                const drinkCheckboxes = rsvpForm.querySelectorAll('input[name="drinks"]:checked');
-                let drinksArray = [];
-                drinkCheckboxes.forEach(cb => {
-                    drinksArray.push(cb.parentNode.innerText.trim());
-                });
-                const allDrinks = drinksArray.length > 0 ? drinksArray.join(', ') : 'Не выбрано / Безалкогольные';
+                // 3. Сбор текстовых пожеланий по напиткам (textarea)
+                const drinksInput = rsvpForm.querySelector('textarea[name="drinks_preferences"]');
+                // Если поле заполнено, берем текст, иначе пишем дефолтную заглушку
+                const allDrinks = (drinksInput && drinksInput.value.trim() !== '') ? drinksInput.value.trim() : 'Не указано / Любые напитки';
 
-                // Данные для отправки
+                // Данные для отправки в Google Таблицу
                 const formData = {
                     names: allNames,
                     attendance: attendanceText,
-                    drinks: attendanceText === 'Приду(ем)' ? allDrinks : '—' // Если не придут, напитки не нужны
+                    drinks: attendanceText === 'Приду(ем)' ? allDrinks : '—' // Если не придут, ставим прочерк
                 };
 
-                // ВСТАВЬТЕ СЮДА СВОЮ ССЫЛКУ ИЗ ШАГА 1 (URL веб-приложения)
+                // Твой URL веб-приложения Google Apps Script
                 const TELEMETRY_URL = "https://script.google.com/macros/s/AKfycbyglLWw4VW4s1bsTdDV9mXP5IBoXwzhSHqOMWIjDKMUUcR3QD7pZP132Q6YWMEGZzIlqQ/exec";
 
                 // Отправляем запрос
@@ -822,11 +810,11 @@
                     body: JSON.stringify(formData)
                 })
                 .then(() => {
-                    // Поскольку режим no-cors не возвращает ответ, мы просто считаем, что все ок через секунду
+                    // Поскольку режим no-cors не возвращает ответ, мы просто считаем, что все ок
                     rsvpForm.innerHTML = `
                         <div class="text-center py-12 space-y-4 animate-fade-in">
                             <div class="text-4xl text-stone-400">✨</div>
-                            <h3 class="font-serif text-2xl text-stone-800 italic">Спасибо за ответ!</h3>
+                            <h3 class="font-serif text-2xl text-stone-800 italic">Спасибо за answer!</h3>
                             <p class="text-stone-500 font-light text-sm tracking-wide">Мы учли ваши пожелания и с нетерпением ждем встречи.</p>
                         </div>
                     `;
@@ -837,7 +825,7 @@
                     submitButton.innerText = originalButtonText;
                     submitButton.disabled = false;
                 });
-            });
+            });   
         }
     });
     </script>
