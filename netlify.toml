@@ -1,7 +1,8 @@
+# Указываем Netlify, что собирать ничего не нужно — сайт чистый
 [build]
-  command = "npm run build" # или что у тебя там стоит
-  publish = "dist"
+  command = ""
+  publish = "."
 
-# Отключаем Image CDN, который ломает загрузку в РФ
+# Полностью отключаем встроенный Netlify Image CDN, который блокируют в РФ
 [images]
   remote_images = []
