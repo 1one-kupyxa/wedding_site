@@ -1,0 +1,7 @@
+[build]
+  publish = "dist" # или ваша папка сборки: "public" / "build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; img-src 'self' https://*.storage.yandex.net; script-src 'self' 'nonce-c3263b787d5c4a67a59fc02b71138d5f';"
